@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <div>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Projects
+        Selected Projects
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {projects.map((project) => (

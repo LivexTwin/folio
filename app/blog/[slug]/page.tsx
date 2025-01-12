@@ -22,6 +22,7 @@ export function generateMetadata({ params }) {
     publishedAt: publishedTime,
     summary: description,
     image,
+    author,
   } = post.metadata;
   let ogImage = image
     ? image
@@ -48,6 +49,7 @@ export function generateMetadata({ params }) {
       description,
       images: [ogImage],
     },
+    author,
   };
 }
 
@@ -77,7 +79,8 @@ export default function Blog({ params }) {
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
               "@type": "Person",
-              name: "My Portfolio",
+              // name: "My Portfolio",
+              name: post.metadata.author || "Anthony Molina", // Fallback to a default name
             },
           }),
         }}
@@ -87,7 +90,10 @@ export default function Blog({ params }) {
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
+          {formatDate(post.metadata.publishedAt)} · Written by{" "}
+          <span className="font-semibold">
+            {post.metadata.author || "Your Name Here"}
+          </span>
         </p>
       </div>
       <article className="prose">

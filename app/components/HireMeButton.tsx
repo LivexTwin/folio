@@ -30,7 +30,7 @@ export default function HireMeButton() {
             </defs>
             <text
               fill="currentColor  "
-              className=" text-[1.075rem]  md:text-lg"
+              className=" text-[1.060rem]  md:text-lg"
             >
               <textPath xlinkHref="#circlePath">
                 Designer ⭑ Developer ⭑ Designer ⭑ Developer ⭑

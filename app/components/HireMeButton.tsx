@@ -17,7 +17,9 @@ export default function HireMeButton() {
           <motion.svg
             animate={{ rotate: 360 }}
             transition={{ duration: 8, ease: "linear", repeat: Infinity }}
-            viewBox="0 0 300 300"
+            viewBox="0 0 300 300 "
+            width="300"
+            height="300"
             className="w-64 h-64 md:w-[500px] md:h-[500px] dark:text-white"
           >
             <defs>
@@ -26,7 +28,7 @@ export default function HireMeButton() {
                 d="M 150, 150 m -60, 0 a 60,60 0 0,1 120, 0 a 60,60 0 0,1 -120,0"
               />
             </defs>
-            <text fill="currentColor" className="text-lg">
+            <text fill="currentColor  " className=" text-[1.1rem]  md:text-lg">
               <textPath xlinkHref="#circlePath">
                 Designer ⭑ Developer ⭑ Designer ⭑ Developer ⭑
               </textPath>

@@ -15,9 +15,6 @@ module.exports = {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
       },
-      fontSize: {
-        md: "1.1rem",
-      },
     },
   },
   plugins: [],

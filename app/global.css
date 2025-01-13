@@ -5,6 +5,12 @@
   color: #fefefe;
 }
 
+@tailwind utilities;
+
+.text-small-plus {
+  @apply text-[1.1rem];
+}
+
 :root {
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;

@@ -27,7 +27,7 @@ export default function HireMeButton() {
               />
             </defs>
             <text fill="currentColor ">
-              <textPath xlinkHref="#circlePath" className="text-lg">
+              <textPath xlinkHref="#circlePath" className="text-base">
                 Designer ⭑ Developer ⭑ Designer ⭑ Developer ⭑
               </textPath>
             </text>

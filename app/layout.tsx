@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default: "Anthony Molina",
-    template: "%s | Anthony Molina",
+    template: "%s | LT",
   },
   description: "Designer & Developer based in Atlanta, Georgia",
   openGraph: {

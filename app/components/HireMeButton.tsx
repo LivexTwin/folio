@@ -26,8 +26,8 @@ export default function HireMeButton() {
                 d="M 150, 150 m -60, 0 a 60,60 0 0,1 120, 0 a 60,60 0 0,1 -120,0"
               />
             </defs>
-            <text fill="currentColor ">
-              <textPath xlinkHref="#circlePath" className="text-base">
+            <text fill="currentColor" className="text-lg">
+              <textPath xlinkHref="#circlePath">
                 Designer ⭑ Developer ⭑ Designer ⭑ Developer ⭑
               </textPath>
             </text>

@@ -7,10 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // fontFamily: {
+
+      //   sans: ["var(--font-myfont)", "sans-serif"], // Use the custom font
+      // },
       fontFamily: {
-        sans: ["var(--font-myfont)", "sans-serif"], // Use the custom font
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
       },
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
 };

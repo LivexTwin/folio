@@ -6,32 +6,34 @@ import { useTheme } from "next-themes"; // Import useTheme from next-themes
 const ToggleSwitch = () => {
   const [mounted, setMounted] = useState(false); // To track whether the component has mounted
   const { theme, setTheme } = useTheme(); // Access theme and setTheme from next-themes
+  const [isToggled, setIsToggled] = useState(false); // Local state to control the toggle
 
   // Set mounted to true after the component has mounted on the client
   useEffect(() => {
     setMounted(true);
-  }, []);
+    // Sync the toggle state with the current theme
+    setIsToggled(theme === "dark");
+  }, [theme]);
 
   // Prevent rendering until the component has mounted to avoid hydration mismatch
   if (!mounted) {
     return null;
   }
 
-  // Handle theme toggle
+  // Handle toggle click
   const toggleSwitch = () => {
-    // Toggle between 'dark' and 'light' themes
-    setTheme(theme === "dark" ? "light" : "dark");
+    const newTheme = isToggled ? "light" : "dark";
+    setTheme(newTheme); // Update the theme using next-themes
+    setIsToggled(!isToggled); // Update the local toggle state
   };
 
   return (
-    <motion.div
+    <div
       role="switch" // Indicates that this is a switch for screen readers
-      aria-checked={theme === "dark" ? "true" : "false"} // State of the switch
+      aria-checked={isToggled} // State of the switch
       aria-label="Toggle dark mode" // Describes the switch
-      className={`relative flex items-center w-[34px] h-5 rounded-3xl p-[2px] transition-colors ${
-        theme === "dark"
-          ? "bg-neutral-400 justify-end" // Dark mode: Gray background and ball is black
-          : "bg-black justify-start" // Light mode: Black background and ball is gray
+      className={`relative flex items-center w-[34px] h-5 rounded-full p-[2px] cursor-pointer transition-colors ${
+        isToggled ? "bg-neutral-400 justify-end" : "bg-black justify-start"
       }`}
       onClick={toggleSwitch}
       tabIndex={0} // Makes the element focusable with the keyboard
@@ -44,14 +46,12 @@ const ToggleSwitch = () => {
     >
       <motion.div
         className={`w-4 h-4 rounded-full shadow-md ${
-          theme === "dark" ? "bg-black" : "bg-gray-300"
+          isToggled ? "bg-black" : "bg-gray-300"
         }`}
-        animate={{
-          scaleX: theme === "dark" ? 1 : -1, // Flip the ball for smooth transition
-        }}
+        layout // Automatically animates position changes
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       />
-    </motion.div>
+    </div>
   );
 };
 

@@ -38,7 +38,7 @@ export default function HireMeButton() {
             </text>
           </motion.svg>
           <span
-            className={` w-16 h-16 md:w-28 md:h-28 absolute top-0 uppercase left-0 right-0 bottom-0 m-auto bg-black text-white dark:bg-white dark:text-black rounded-full flex items-center justify-center text-xs md:text-sm lg:text-base xl:text-lg`}
+            className={` w-16 h-16 md:w-28 md:h-28 absolute top-0 uppercase left-0 right-0 bottom-0 m-auto bg-black text-white dark:bg-[white] dark:text-black rounded-full flex items-center justify-center text-xs md:text-sm lg:text-base xl:text-lg`}
           >
             Hire Me
           </span>

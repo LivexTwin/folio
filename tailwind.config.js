@@ -15,9 +15,21 @@ module.exports = {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
       },
+      maskImage: {
+        gradient: "linear-gradient(0deg, transparent, #000 80px)",
+      },
     },
   },
   // darkMode: "class",
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".mask-gradient": {
+          "-webkit-mask-image": "linear-gradient(0deg, transparent, #000 80px)",
+          "mask-image": "linear-gradient(0deg, transparent, #000 80px)",
+        },
+      });
+    },
+  ],
   darkMode: "selector",
 };

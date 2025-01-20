@@ -1,24 +1,30 @@
 export const projects = [
   {
     id: 1,
-    title: "Portfolio Website",
-    description: "A portfolio website built using Next.js and Tailwind CSS.",
-    tech: ["Next.js", "Tailwind CSS", "Vercel"],
-    url: "/projects/portfolio-website",
+    title: "vlssh0p.com",
+    description:
+      "I developed a headless Shopify storefront, focusing on creating a seamless and customizable e-commerce experience. The project allowed me to explore Shopify's Storefront API and integrate dynamic features.",
+    tech: ["Nuxt 3", "GraphQL", "Shopify Storefront API", "Pinia"],
+    role: "Design, Frontend and Backend",
+    url: "/projects/vlssh0p",
   },
   {
     id: 2,
-    title: "E-commerce Store",
+    title: "This Website",
     description:
-      "A fully functional e-commerce store built with React and Node.js.",
-    tech: ["React", "Node.js", "MongoDB"],
-    url: "/projects/e-commerce-store",
+      "This portfolio website features a minimalist design with clean typography. The simple layout and subtle animations highlight my work, offering a visually engaging experience.",
+    tech: ["Next.js", "Tailwind CSS", "Markdown, Framer Motion"],
+    role: "Frontend Developer and Animator",
+    url: "/projects/portfolio-website",
   },
+
   {
     id: 3,
-    title: "Blog App",
-    description: "A simple blog application built with Next.js and Markdown.",
-    tech: ["Next.js", "Markdown", "Vercel"],
+    title: "Yxngrod.com",
+    description:
+      "A personal rap portfolio website that features the artist's music, videos, and bio. I worked on the branding and crafted a design that reflects the artist’s identity while making the content easy to navigate for fans.",
+    tech: ["Vite, Vue, Blender, Adobe Illustrator"],
+    role: "Graphic Designer, Frontend and Backend",
     url: "/projects/blog-app",
   },
 ];

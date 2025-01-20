@@ -52,7 +52,7 @@ export default function RootLayout({
       lang="en"
       className={cx(
         "text-black bg-white dark:text-white dark:bg-black",
-        GeistSans.className,
+        GeistSans.variable,
         GeistMono.variable
       )}
     >

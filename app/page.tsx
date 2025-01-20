@@ -8,7 +8,7 @@ export default function Page() {
       <h1 className="mb-2 text-4xl lg:text-6xl font-bold tracking-tighter">
         Anthony Molina
       </h1>
-      <h3 className="dark:text-neutral-400 text-lg font-medium mb-6 md:mb-8 lg:mb-10">
+      <h3 className="dark:text-neutral-400 text-lg font-light mb-6 md:mb-8 lg:mb-10">
         Developer & Designer
       </h3>
 

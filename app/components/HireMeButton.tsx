@@ -6,7 +6,7 @@ import localFont from "next/font/local"; // Import the local font
 // Your custom font
 const myFont = localFont({
   src: "../fonts/NeueMontreal-Bold.otf",
-  variable: "--font-myfont", // Define a CSS variable for the font
+  display: "swap",
 });
 
 export default function HireMeButton() {

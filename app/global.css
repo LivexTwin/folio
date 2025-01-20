@@ -25,11 +25,6 @@
   --font-geist-mono: "Geist Mono", monospace;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-}
-
 /* @media (prefers-color-scheme: dark) {
   :root {
     --sh-class: #4c97f8;
@@ -48,6 +43,7 @@ body {
 
 html {
   min-width: 360px;
+  scroll-behavior: smooth;
 }
 
 .prose .anchor {

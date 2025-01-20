@@ -1,15 +1,60 @@
-// components/ProjectCard.tsx
+function RightArrowIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      width="12"
+      height="12"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  );
+} // components/ProjectCard.tsx
+
 const ProjectCard = ({
   project,
 }: {
-  project: { title: string; description: string; url: string };
+  project: {
+    title: string;
+    description: string;
+    url: string;
+    tech: string[];
+    role: string;
+  };
 }) => {
   return (
-    <div className="border p-4 rounded-lg shadow-md hover:shadow-lg">
-      <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
-      <p className=" mb-4">{project.description}</p>
-      <a href={project.url} className="text-blue-500 hover:underline">
-        View Project
+    <div className="border dark:border-none p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 dark:hover:bg-[#0a0a0a] dark:hover:shadow-[0_1px_2px_rgba(0,0,0,0.16)] dark:transition-[background-color_0.2s,_box-shadow_0.2s] cursor-pointer">
+      <h2 className="text-xl font-light uppercase mb-2">{project.title}</h2>
+      <p className="mb-4 text-sm text-neutral-700 dark:text-neutral-400 mask-gradient">
+        {project.description}
+      </p>
+      {/* Container for "Made with" and "Role" sections */}
+      <div className="flex flex-col gap-4 mb-6">
+        {/* "Made with" Section */}
+        <div className="flex flex-col gap-2 ">
+          <span className="font-semibold uppercase text-xs max-w-fit  rounded-lg ">
+            Made with:
+          </span>
+          <span className="text-xs">{project.tech.join(", ")}</span>
+        </div>
+
+        {/* "Role" Section */}
+        <div className="flex flex-col gap-2">
+          <span className="font-semibold uppercase text-xs max-w-fit  rounded-lg ">
+            Role:
+          </span>
+          <span className="text-xs">{project.role}</span>
+        </div>
+      </div>
+
+      <a href={project.url} className="flex items-center gap-2 hover:underline">
+        <p className="font-medium uppercase">Explore</p>
+        <RightArrowIcon />
       </a>
     </div>
   );

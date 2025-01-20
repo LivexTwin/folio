@@ -46,6 +46,18 @@ html {
   scroll-behavior: smooth;
 }
 
+#site {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* *link styling* */
+.link-style {
+  @apply transition-all hover:text-neutral-800 dark:hover:text-neutral-200;
+}
+
 .prose .anchor {
   @apply absolute invisible no-underline;
 

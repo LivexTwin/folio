@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function RightArrowIcon() {
   return (
     <svg
@@ -14,7 +16,7 @@ function RightArrowIcon() {
       />
     </svg>
   );
-} // components/ProjectCard.tsx
+}
 
 const ProjectCard = ({
   project,
@@ -29,13 +31,15 @@ const ProjectCard = ({
 }) => {
   return (
     <div className="border dark:border-none p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 dark:hover:bg-[#0a0a0a] dark:hover:shadow-[0_1px_2px_rgba(0,0,0,0.16)] dark:transition-[background-color_0.2s,_box-shadow_0.2s] cursor-pointer">
-      <h2 className="text-xl font-light uppercase mb-2">{project.title}</h2>
-      <p className="mb-4 text-sm text-neutral-700 dark:text-neutral-400 mask-gradient">
-        {project.description}
-      </p>
+      <Link href={project.url}>
+        <h2 className="text-xl font-light uppercase mb-2">{project.title}</h2>
+        <p className="mb-4 text-sm text-neutral-700 dark:text-neutral-400 mask-gradient">
+          {project.description}
+        </p>
+      </Link>
+
       {/* Container for "Made with" and "Role" sections */}
       <div className="flex flex-col gap-4 mb-6">
-        {/* "Made with" Section */}
         <div className="flex flex-col gap-2 ">
           <span className="font-semibold uppercase text-xs max-w-fit  rounded-lg ">
             Made with:
@@ -43,7 +47,6 @@ const ProjectCard = ({
           <span className="text-xs">{project.tech.join(", ")}</span>
         </div>
 
-        {/* "Role" Section */}
         <div className="flex flex-col gap-2">
           <span className="font-semibold uppercase text-xs max-w-fit  rounded-lg ">
             Role:
@@ -52,10 +55,13 @@ const ProjectCard = ({
         </div>
       </div>
 
-      <a href={project.url} className="flex items-center gap-2 hover:underline">
+      <Link
+        className="flex items-center gap-2 hover:underline"
+        href={project.url}
+      >
         <p className="font-medium uppercase">Explore</p>
         <RightArrowIcon />
-      </a>
+      </Link>
     </div>
   );
 };

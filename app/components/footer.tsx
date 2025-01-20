@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function ArrowIcon() {
   return (
     <svg
@@ -17,45 +19,91 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="mb-6">
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/LivexTwin"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://x.com/livestartwin"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">twitter</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.linkedin.com/in/anthony-barahona-779287313/"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">linkedin</p>
-          </a>
-        </li>
-      </ul>
-      <p className="mt-8 text-neutral-600 dark:text-neutral-300 uppercase">
-        © {new Date().getFullYear()} a-is-lt.com
-      </p>
+    <footer className="py-8">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Connect Section */}
+          <div>
+            <h3 className="font-semibold mb-4">Connect</h3>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="https://github.com/LivexTwin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-style flex items-center"
+                >
+                  <ArrowIcon />
+                  <span className="ml-2">Github</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/livestartwin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-style flex items-center"
+                >
+                  <ArrowIcon />
+                  <span className="ml-2">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/anthony-barahona-779287313/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-style flex items-center"
+                >
+                  <ArrowIcon />
+                  <span className="ml-2">LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* More Section */}
+          <div>
+            <h3 className="font-semibold  mb-4">More</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="#about" className="link-style">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="#blog" className="link-style">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="#portfolio" className="link-style">
+                  Portfolio
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Section */}
+          <div>
+            <h3 className="font-semibold  mb-4">Contact</h3>
+            <p>
+              Email:{" "}
+              <Link
+                href="mailto:hello@a-is-lt.com"
+                className="link-style whitespace-nowrap"
+              >
+                hello@a-is-lt.com
+              </Link>
+            </p>
+          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="mt-8 text-center text-sm uppercase ">
+          <p>© {new Date().getFullYear()} a-is-lt.com</p>
+        </div>
+      </div>
     </footer>
   );
 }

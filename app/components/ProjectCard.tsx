@@ -33,7 +33,7 @@ const ProjectCard = ({
     <div className="border dark:border-none p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 dark:hover:bg-[#0a0a0a] dark:hover:shadow-[0_1px_2px_rgba(0,0,0,0.16)] dark:transition-[background-color_0.2s,_box-shadow_0.2s] cursor-pointer">
       <Link href={project.url}>
         <h2 className="text-xl font-light uppercase mb-2">{project.title}</h2>
-        <p className="mb-4 text-sm text-neutral-700 dark:text-neutral-400 mask-gradient">
+        <p className="mb-4  text-neutral-700 dark:text-neutral-400 mask-gradient">
           {project.description}
         </p>
       </Link>
@@ -41,17 +41,17 @@ const ProjectCard = ({
       {/* Container for "Made with" and "Role" sections */}
       <div className="flex flex-col gap-4 mb-6">
         <div className="flex flex-col gap-2 ">
-          <span className="font-semibold uppercase text-xs max-w-fit  rounded-lg ">
+          <span className="font-semibold uppercase text-sm max-w-fit  rounded-lg ">
             Made with:
           </span>
-          <span className="text-xs">{project.tech.join(", ")}</span>
+          <span className="text-sm">{project.tech.join(", ")}</span>
         </div>
 
         <div className="flex flex-col gap-2">
-          <span className="font-semibold uppercase text-xs max-w-fit  rounded-lg ">
+          <span className="font-semibold uppercase text-sm max-w-fit  rounded-lg ">
             Role:
           </span>
-          <span className="text-xs">{project.role}</span>
+          <span className="text-sm">{project.role}</span>
         </div>
       </div>
 

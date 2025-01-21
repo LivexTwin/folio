@@ -32,8 +32,8 @@ const ToggleSwitch = () => {
       role="switch" // Indicates that this is a switch for screen readers
       aria-checked={isToggled} // State of the switch
       aria-label="Toggle dark mode" // Describes the switch
-      className={`relative flex items-center w-[34px] h-5 rounded-full p-[2px] cursor-pointer transition-colors ${
-        isToggled ? "bg-neutral-400 justify-end" : "bg-black justify-start"
+      className={`relative flex items-center z-50 w-[34px] h-5 rounded-full p-[2px] cursor-pointer transition-colors ${
+        isToggled ? "bg-gray-300 justify-end" : "bg-black justify-start"
       }`}
       onClick={toggleSwitch}
       tabIndex={0} // Makes the element focusable with the keyboard

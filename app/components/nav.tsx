@@ -1,17 +1,7 @@
 import Link from "next/link";
 import ToggleSwitch from "./ToggleSwitch";
-
-const navItems = {
-  "/": {
-    name: "Home",
-  },
-  "/projects": {
-    name: "Projects",
-  },
-  "/blog": {
-    name: "Blog",
-  },
-};
+import { NavMenu } from "./NavMenu";
+import { navItems } from "utils/navData";
 
 export function Navbar() {
   return (
@@ -21,21 +11,22 @@ export function Navbar() {
           className="flex flex-row items-center justify-between relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
           id="nav"
         >
-          <div className="flex flex-row space-x-0 pr-10">
-            {Object.entries(navItems).map(([path, { name }]) => {
-              return (
+          <ul className="sm:flex flex-row space-x-0 pr-10 hidden ">
+            {Object.entries(navItems).map(([path, { name }]) => (
+              <li key={path} className="m-1">
                 <Link
-                  key={path}
                   href={path}
-                  className="link-style flex align-middle relative py-1 px-2 m-1"
+                  className="link-style flex align-middle relative py-1 px-2"
                 >
                   {name}
                 </Link>
-              );
-            })}
-          </div>
-          <div className="ml-auto">
+              </li>
+            ))}
+          </ul>
+
+          <div className="ml-auto flex items-center gap-4">
             <ToggleSwitch />
+            <NavMenu />
           </div>
         </nav>
       </div>

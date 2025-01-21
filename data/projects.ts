@@ -1,3 +1,4 @@
+// data/projects.ts
 export const projects = [
   {
     id: 1,
@@ -7,6 +8,7 @@ export const projects = [
     tech: ["Nuxt 3", "GraphQL", "Shopify Storefront API", "Pinia"],
     role: "Design, Frontend and Backend",
     url: "/projects/vlssh0p",
+    isFeatured: true, // Add the isFeatured property here
   },
   {
     id: 2,
@@ -16,8 +18,8 @@ export const projects = [
     tech: ["Next.js", "Tailwind CSS", "Markdown, Framer Motion"],
     role: "Frontend Developer and Animator",
     url: "/projects/portfolio-website",
+    isFeatured: false, // Set this to false if not featured
   },
-
   {
     id: 3,
     title: "Yxngrod.com",
@@ -26,5 +28,6 @@ export const projects = [
     tech: ["Vite, Vue, Blender, Adobe Illustrator"],
     role: "Graphic Designer, Frontend and Backend",
     url: "/projects/blog-app",
+    isFeatured: false, // Set this to false if not featured
   },
 ];

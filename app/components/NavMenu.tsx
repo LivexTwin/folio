@@ -75,9 +75,9 @@ export function NavMenu() {
   const menuContent = (
     <motion.div
       {...animationProps}
-      className="absolute -top-2 -right-2 w-64 min-h-64 rounded-lg bg-white shadow-md dark:bg-[#0a0a0a] p-8 z-10 flex flex-col origin-top-right"
+      className="absolute -top-3 -right-2 w-64 min-h-64 rounded-lg bg-white shadow-md dark:bg-[#0a0a0a] p-8 z-10 flex flex-col origin-top-right"
     >
-      <ul className="flex flex-col gap-4 flex-1">
+      <ul className="flex flex-col gap-4 flex-1 pt-4">
         {Object.entries(navItems).map(([path, { name }]) => (
           <li key={path}>
             <Link

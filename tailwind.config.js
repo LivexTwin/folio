@@ -18,6 +18,7 @@ module.exports = {
       maskImage: {
         gradient: "linear-gradient(0deg, transparent, #000 80px)",
       },
+      colors: {},
     },
   },
   // darkMode: "class",

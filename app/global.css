@@ -58,6 +58,115 @@ html {
   @apply transition-all hover:text-neutral-800 dark:hover:text-neutral-200;
 }
 
+/* featured badge styling */
+.shine {
+  position: relative;
+  text-transform: uppercase;
+  font-size: x-small;
+  border-radius: 9999px;
+  padding: 5px 10px;
+  margin-top: -0.5rem;
+  background: linear-gradient(
+      113.36deg,
+      #fff0,
+      #ffffff04 15%,
+      #ffffff12 40%,
+      #ffffff04 60%,
+      #fff0
+    ),
+    #000;
+  border: 1px solid #333;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.shine:before {
+  content: "";
+  animation: shine 18s cubic-bezier(0.8, 0, 0.05, 1) infinite; /* Keeps original duration */
+  background: linear-gradient(
+    112deg,
+    transparent 30%,
+    hsla(0, 0%, 100%, 0.1) 40%,
+    hsla(0, 0%, 100%, 0.3) 50%,
+    hsla(0, 0%, 100%, 0.1) 60%,
+    transparent 80%
+  );
+  background-position: 0;
+  background-size: 200% auto;
+  border-radius: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    background-position: -50%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  15% {
+    background-position: 150%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+
+  /* First cycle ends, second cycle starts */
+  33.33% {
+    opacity: 0;
+  }
+  38.33% {
+    background-position: -50%;
+    opacity: 0;
+  }
+  43.33% {
+    opacity: 0.7;
+  }
+  48.33% {
+    background-position: 150%;
+    opacity: 0;
+  }
+  53.33% {
+    opacity: 0;
+  }
+
+  /* Second cycle ends, third cycle starts */
+  66.66% {
+    opacity: 0;
+  }
+  71.66% {
+    background-position: -50%;
+    opacity: 0;
+  }
+  76.66% {
+    opacity: 0.7;
+  }
+  81.66% {
+    background-position: 150%;
+    opacity: 0;
+  }
+  86.66% {
+    opacity: 0;
+  }
+
+  /* Third cycle ends, prepare for restart */
+  100% {
+    opacity: 0;
+  }
+}
+
 .prose .anchor {
   @apply absolute invisible no-underline;
 

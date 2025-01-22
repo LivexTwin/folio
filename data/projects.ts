@@ -8,6 +8,9 @@ export const projects = [
     tech: ["Nuxt 3", "GraphQL", "Shopify Storefront API", "Pinia"],
     role: "Design, Frontend and Backend",
     url: "/projects/vlssh0p",
+    slug: "vlssh0p", // Add a slug here
+    image: "/images/vls-mobile.png", // Add an image path
+    mobileImage: "/images/vlssh0p-mobile.png", // Optional for mobile
     isFeatured: true, // Add the isFeatured property here
   },
   {
@@ -17,7 +20,10 @@ export const projects = [
       "This portfolio website features a minimalist design with clean typography. The simple layout and subtle animations highlight my work, offering a visually engaging experience.",
     tech: ["Next.js", "Tailwind CSS", "Markdown, Framer Motion"],
     role: "Frontend Developer and Animator",
-    url: "/projects/portfolio-website",
+    url: "/projects/this-website",
+    image: "/images/vlssh0p-desktop.png", // Add an image path
+    slug: "this-website",
+    mobileImage: "/images/vlssh0p-mobile.png", // Optional for mobile
     isFeatured: false, // Set this to false if not featured
   },
   {
@@ -27,7 +33,10 @@ export const projects = [
       "A personal rap portfolio website that features the artist's music, videos, and bio. I worked on the branding and crafted a design that reflects the artist’s identity while making the content easy to navigate for fans.",
     tech: ["Vite, Vue, Blender, Adobe Illustrator"],
     role: "Graphic Designer, Frontend and Backend",
-    url: "/projects/blog-app",
+    url: "/projects/yxngrod",
+    slug: "yxngrod",
+    image: "/images/vlssh0p-desktop.png", // Add an image path
+    mobileImage: "/images/vlssh0p-mobile.png", // Optional for mobile
     isFeatured: false, // Set this to false if not featured
   },
 ];

@@ -47,6 +47,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { NavButton } from "./NavButton";
 import { AnimatePresence, motion } from "framer-motion";
+import Icons from "./Icons";
 
 export function NavMenu() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -90,6 +91,7 @@ export function NavMenu() {
           </li>
         ))}
       </ul>
+      <Icons />
     </motion.div>
   );
 

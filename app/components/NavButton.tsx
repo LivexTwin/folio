@@ -102,12 +102,7 @@ export const NavButton: React.FC<NavMenuToggleProps> = ({
       aria-expanded={menuOpen}
       className="relative justify-self-center flex flex-col gap-2 cursor-pointer  stroke-black dark:stroke-gray-300 stroke-2 z-50"
     >
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        className="stroke-current"
-      >
+      <svg width="24" height="24" viewBox="0 0 24 24">
         {/* Line 1 */}
         <motion.path
           variants={path1Variants}

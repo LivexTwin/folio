@@ -57,12 +57,15 @@ export default function RootLayout({
       )}
     >
       <body>
-        <div id="site" className="antialiased max-w-4xl mx-4 mt-8 lg:mx-auto">
+        <div
+          id="site"
+          className="antialiased md:max-w-2xl lg:max-w-4xl mx-4 mt-8 md:mx-auto"
+        >
           <Providers>
             <header>
               <Navbar />
             </header>
-            <main className="flex-auto min-w-0 pt-8 lg:pt-16  pb-16  flex flex-col px-2 md:px-0">
+            <main className="flex-auto min-w-0 lg:pt-16  pb-16  flex flex-col px-2 md:px-0">
               {children}
             </main>
             <Analytics />

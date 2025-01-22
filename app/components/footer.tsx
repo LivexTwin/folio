@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icons from "./Icons";
 
 function ArrowIcon() {
   return (
@@ -19,7 +20,7 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="py-8">
+    <footer className="pb-8 lg:pt-8">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Connect Section */}
@@ -67,18 +68,18 @@ export default function Footer() {
             <h3 className="font-semibold  mb-4">More</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#about" className="link-style">
-                  About
+                <Link href="#uses" className="link-style">
+                  Uses
                 </Link>
               </li>
               <li>
-                <Link href="#blog" className="link-style">
+                <Link href="/blog" className="link-style">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#portfolio" className="link-style">
-                  Portfolio
+                <Link href="/projects" className="link-style">
+                  Projects
                 </Link>
               </li>
             </ul>
@@ -87,7 +88,7 @@ export default function Footer() {
           {/* Contact Section */}
           <div>
             <h3 className="font-semibold  mb-4">Contact</h3>
-            <p>
+            <p className="pb-4">
               Email:{" "}
               <Link
                 href="mailto:hello@a-is-lt.com"
@@ -96,6 +97,13 @@ export default function Footer() {
                 hello@a-is-lt.com
               </Link>
             </p>
+            <span className="hidden lg:flex gap-4">
+              <Icons />
+            </span>
+          </div>
+
+          <div className="lg:hidden">
+            <Icons />
           </div>
         </div>
 

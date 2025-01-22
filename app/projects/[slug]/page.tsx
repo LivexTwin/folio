@@ -19,7 +19,12 @@ const ProjectDetail = () => {
       <h1>{project.title}</h1>
       <p>{project.description}</p>
       {/* Other project details */}
-      <img src={project.image} alt={project.title} />
+      <img
+        width="200px"
+        height="300px"
+        src={project.image}
+        alt={project.title}
+      />
     </div>
   );
 };

@@ -9,7 +9,7 @@ export const projects = [
     role: "Design, Frontend and Backend",
     url: "/projects/vlssh0p",
     slug: "vlssh0p", // Add a slug here
-    image: "/images/vls-mobile.png", // Add an image path
+    image: "/images/vls_mobile.png", // Add an image path
     mobileImage: "/images/vlssh0p-mobile.png", // Optional for mobile
     isFeatured: true, // Add the isFeatured property here
   },

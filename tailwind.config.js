@@ -19,6 +19,9 @@ module.exports = {
         gradient: "linear-gradient(0deg, transparent, #000 80px)",
       },
       colors: {},
+      fontSize: {
+        responsive: "clamp(1rem, 1.5vw, 1.1rem)",
+      },
     },
   },
   // darkMode: "class",

@@ -3,7 +3,7 @@ import HireMeButton from "./components/HireMeButton";
 
 export default function Page() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen ">
+    <section className="flex flex-col items-center justify-center min-h-screen pt-4">
       <h1 className="text-4xl lg:text-6xl font-bold tracking-tighter">
         Anthony Molina
       </h1>

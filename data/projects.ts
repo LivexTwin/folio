@@ -1,5 +1,20 @@
 // data/projects.ts
-export const projects = [
+export type Project = {
+  id: number;
+  title: string;
+  description: string;
+  overview: string;
+  tech: string[];
+  role: string;
+  url: string;
+  slug: string;
+  image: string;
+  mobileImage: string;
+  isFeatured: boolean;
+  isUnderConstruction: boolean;
+};
+
+export const projects: Project[] = [
   {
     id: 1,
     title: "vlssh0p.com",
@@ -14,6 +29,7 @@ export const projects = [
     image: "/images/vls_large.png",
     mobileImage: "/images/vls_mobile.png",
     isFeatured: true,
+    isUnderConstruction: false,
   },
   {
     id: 2,
@@ -29,6 +45,7 @@ export const projects = [
     image: "/images/vlssh0p-desktop.png",
     mobileImage: "/images/vlssh0p-mobile.png",
     isFeatured: false,
+    isUnderConstruction: true,
   },
   {
     id: 3,
@@ -44,5 +61,6 @@ export const projects = [
     image: "/images/yxngrod_large.png",
     mobileImage: "/images/yxngrod_mobile.png",
     isFeatured: false,
+    isUnderConstruction: false,
   },
 ];

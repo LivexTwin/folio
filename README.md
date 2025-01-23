@@ -1,42 +1,13 @@
-# Portfolio Blog Starter
+🌐 [LivexTwin] - Portfolio
 
-This is a porfolio site template complete with a blog. Includes:
+Welcome to my portfolio repository! This is where I showcase my skills, projects, and experiences as a web developer. Feel free to explore, and don't hesitate to reach out if you'd like to collaborate or have any questions.
 
-- MDX and Markdown support
-- Optimized for SEO (sitemap, robots, JSON-LD schema)
-- RSS Feed
-- Dynamic OG images
-- Syntax highlighting
-- Tailwind v4
-- Vercel Speed Insights / Web Analytics
-- Geist font
+🔗 Live Demo
+🎉 Check out the live portfolio: [a-is-lt.com](https://a-is-lt.com/)
 
-## Demo
+📋 About Me
+Hi, I'm Anthony, a passionate and dedicated Design Engineer with a focus on creating functional, user-friendly, and visually appealing web applications. Here's a little more about me:
 
-https://portfolio-blog-starter.vercel.app
-
-## How to Use
-
-You can choose from one of the following two methods to use this repository:
-
-### One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
-```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
-```
-
-Then, run Next.js in development mode:
-
-```bash
-pnpm dev
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+🌟 Specialties: Frontend Development, Full Stack Development, Responsive Design
+💻 Tech Stack: JavaScript, React, Next.js, Vue, Nuxt, Astro, Node.js, Express, MongoDB, TailwindCSS, etc.
+🎨 Passion: I love crafting intuitive UI/UX designs and solving challenging problems with clean, scalable code.

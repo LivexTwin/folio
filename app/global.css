@@ -53,9 +53,28 @@ html {
   grid-template-columns: minmax(0, 1fr);
 }
 
+/* global buttons */
+.btn {
+  @apply rounded-full dark:bg-black  border py-[6px] px-[12px];
+}
+
 /* *link styling* */
 .link-style {
   @apply transition-all hover:text-neutral-800 dark:hover:text-neutral-200;
+}
+
+/* logo scale up */
+.svg-icon {
+  width: 40px;
+  height: 30px;
+}
+
+/* On medium screens (md) and larger, increase the size */
+@media (min-width: 768px) {
+  .svg-icon {
+    width: 60px;
+    height: 45px;
+  }
 }
 
 /* featured badge styling */

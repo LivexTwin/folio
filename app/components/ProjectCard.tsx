@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Badge from "./Badge";
+import { Project } from "data/projects"; // Import the Project type
 
 function RightArrowIcon() {
   return (
@@ -23,13 +24,7 @@ const ProjectCard = ({
   project,
   isFeatured,
 }: {
-  project: {
-    title: string;
-    description: string;
-    url: string;
-    tech: string[];
-    role: string;
-  };
+  project: Project;
   isFeatured: boolean;
 }) => {
   return (
@@ -41,7 +36,7 @@ const ProjectCard = ({
           {isFeatured && <Badge label="Featured" />}
         </div>
 
-        <p className="mb-4 lg:text-base text-neutral-700 dark:text-neutral-400 mask-gradient">
+        <p className="mb-5 lg:text-base text-neutral-700 dark:text-neutral-400 mask-gradient">
           {project.description}
         </p>
       </Link>
@@ -49,14 +44,14 @@ const ProjectCard = ({
       {/* Container for "Made with" and "Role" sections */}
       <div className="flex flex-col gap-4 mb-6">
         <div className="flex flex-col gap-2 ">
-          <span className="font-semibold uppercase text-sm max-w-fit  rounded-lg ">
+          <span className="font-semibold uppercase text-sm max-w-fit rounded-lg ">
             Made with:
           </span>
           <span className="text-sm">{project.tech.join(", ")}</span>
         </div>
 
         <div className="flex flex-col gap-2">
-          <span className="font-semibold uppercase text-sm max-w-fit  rounded-lg ">
+          <span className="font-semibold uppercase text-sm max-w-fit rounded-lg ">
             Role:
           </span>
           <span className="text-sm">{project.role}</span>

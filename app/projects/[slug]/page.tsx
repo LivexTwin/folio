@@ -52,7 +52,7 @@ const SlugPage = () => {
   }
 
   // Pad the project index to double digits
-  const projectNumber = String(projectIndex + 1).padStart(2, "0"); // 1-based numbering
+  const projectNumber = String(projectIndex).padStart(2, "0"); // 1-based numbering
 
   // Render the ProjectDetail component
   return <ProjectDetail projectNumber={projectNumber} project={project} />;

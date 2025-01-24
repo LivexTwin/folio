@@ -20,7 +20,7 @@ export default function HireMeButton() {
             viewBox="0 0 300 300 "
             width="300"
             height="300"
-            className="w-64 h-64 md:w-[500px] md:h-[500px] dark:text-white"
+            className="w-64 h-64 md:w-[400px] md:h-[400px] dark:text-white"
           >
             <defs>
               <path

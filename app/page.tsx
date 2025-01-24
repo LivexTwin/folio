@@ -3,15 +3,15 @@ import HireMeButton from "./components/HireMeButton";
 
 export default function Page() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen pt-4">
-      <h1 className="text-4xl lg:text-6xl font-bold tracking-tighter">
+    <section className="flex flex-col items-center justify-center pt-8">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
         Anthony Molina
       </h1>
-      <h3 className="dark:text-neutral-400 text-lg font-light mb-6 md:mb-8 lg:mb-10">
+      <h3 className="dark:text-neutral-400 text-lg lg:text-xl font-light mb-6 md:mb-8 lg:mb-10">
         Developer & Designer
       </h3>
 
-      <p className="mb-12 lg:mb-20 text-center max-w-md">
+      <p className="mb-12 lg:mb-20 text-center max-w-[280px] lg:max-w-md">
         Based in Atlanta, GA, I create and ship digital products that bridge
         design and technology, transforming ideas into dynamic and memorable
         user experiences.

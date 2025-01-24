@@ -4,7 +4,7 @@ import { projects } from "../../data/projects"; // Import your project data
 
 const Projects = () => {
   return (
-    <div>
+    <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         Selected Projects
       </h1>
@@ -17,7 +17,7 @@ const Projects = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

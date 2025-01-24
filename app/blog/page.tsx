@@ -11,10 +11,10 @@ export default function Page() {
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">
         Welcome to my Blog
       </h1>
-      <p className="mb-2">
-        <strong>Note</strong> this part of my site is still a work in progress
+      <p className="mb-2 text-neutral-700 dark:text-neutral-400 italic text-sm">
+        <strong>Note:</strong> this part of my site is still a work in progress
       </p>
-      <p className="mb-8 text-neutral-700 dark:text-neutral-400">
+      <p className="mb-8 ">
         I plan to write about recent projects, share more about my personal
         life, and reflect on recent thoughts.
       </p>

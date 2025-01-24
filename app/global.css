@@ -55,7 +55,7 @@ html {
 
 /* global buttons */
 .btn {
-  @apply rounded-full dark:bg-black  border py-[6px] px-[12px];
+  @apply rounded-full dark:bg-black  border-red-500 py-[6px] px-[12px];
 }
 
 /* *link styling* */
@@ -72,8 +72,8 @@ html {
 /* On medium screens (md) and larger, increase the size */
 @media (min-width: 768px) {
   .svg-icon {
-    width: 60px;
-    height: 45px;
+    width: 50px;
+    height: 40px;
   }
 }
 
@@ -82,7 +82,7 @@ html {
   position: relative;
   text-transform: uppercase;
   font-size: x-small;
-  border: 0.5px solid #333;
+
   border-radius: 9999px;
   padding: 5px 10px;
   margin-top: -0.5rem;
@@ -107,9 +107,9 @@ html {
   background: linear-gradient(
     112deg,
     transparent 30%,
-    hsla(0, 0%, 100%, 0.1) 40%,
-    hsla(0, 0%, 100%, 0.3) 50%,
-    hsla(0, 0%, 100%, 0.1) 60%,
+    hsla(0, 0%, 100%, 0.4) 40%,
+    hsla(0, 0%, 100%, 0.6) 50%,
+    hsla(0, 0%, 100%, 0.4) 60%,
     transparent 80%
   );
   background-position: 0;
@@ -122,6 +122,23 @@ html {
   pointer-events: none;
   position: absolute;
   z-index: 2;
+}
+
+.dark .shine {
+  border: 0.5px solid #333;
+}
+
+.dark .shine:before {
+  background: linear-gradient(
+    112deg,
+    transparent 30%,
+    hsla(0, 0%, 100%, 0.1) 40%,
+    hsla(0, 0%, 100%, 0.3) 50%,
+    hsla(0, 0%, 100%, 0.1) 60%,
+    transparent 80%
+  );
+  background-position: 0;
+  background-size: 200% auto;
 }
 
 @keyframes shine {
@@ -247,7 +264,7 @@ html {
 }
 
 .prose h2 {
-  @apply text-xl lg:text-3xl font-medium tracking-tight mt-8 mb-8;
+  @apply text-xl lg:text-3xl font-medium tracking-tight mt-8 mb-12;
 }
 
 .prose h3 {

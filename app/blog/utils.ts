@@ -54,7 +54,13 @@ export function getBlogPosts() {
   return getMDXData(path.join(process.cwd(), "app", "blog", "posts"));
 }
 
-export function formatDate(date: string, includeRelative = false) {
+//
+
+export function formatDate(
+  date: string,
+  includeRelative = false,
+  isShortFormat = false
+) {
   let currentDate = new Date();
   if (!date.includes("T")) {
     date = `${date}T00:00:00`;
@@ -77,11 +83,23 @@ export function formatDate(date: string, includeRelative = false) {
     formattedDate = "Today";
   }
 
+  // If short format is needed, use the abbreviated month and day
+  let shortDate = targetDate.toLocaleString("en-us", {
+    month: "short",
+    day: "numeric",
+  });
+
+  // Full date format with year
   let fullDate = targetDate.toLocaleString("en-us", {
     month: "long",
     day: "numeric",
     year: "numeric",
   });
+
+  // Return short date or full date based on the flag
+  if (isShortFormat) {
+    return shortDate;
+  }
 
   if (!includeRelative) {
     return fullDate;

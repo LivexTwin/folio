@@ -35,7 +35,7 @@ export function Navbar() {
           initial={false} // No initial animation
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className="  flex flex-row items-center ml-[8px] pt-3 lg:pt-6 pb-3  bg-white dark:bg-black justify-between tracking-tight "
+          className="  flex flex-row items-center py-3 lg:pt-6  px-3 rounded-lg  bg-white dark:bg-black justify-between tracking-tight "
           id="nav"
         >
           <div>

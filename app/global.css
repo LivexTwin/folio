@@ -48,6 +48,7 @@ html {
 
 #site {
   min-height: 100dvh;
+  min-height: 100svh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(0, 1fr);
@@ -55,7 +56,11 @@ html {
 
 /* global buttons */
 .btn {
-  @apply rounded-full dark:bg-black  border-red-500 py-[6px] px-[12px];
+  @apply rounded-full bg-black text-white dark:bg-white dark:text-black  py-[6px] px-[12px];
+}
+
+.btn-2 {
+  @apply rounded-full bg-white text-black dark:bg-black dark:text-white border-[#292929] py-[6px] px-[12px];
 }
 
 /* *link styling* */
@@ -98,6 +103,7 @@ html {
 
   color: #fff;
   position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -125,7 +131,7 @@ html {
 }
 
 .dark .shine {
-  border: 0.5px solid #333;
+  border: 0.5px solid #292929;
 }
 
 .dark .shine:before {
@@ -264,7 +270,7 @@ html {
 }
 
 .prose h2 {
-  @apply text-xl lg:text-3xl font-medium tracking-tight mt-8 mb-12;
+  @apply text-xl lg:text-3xl font-medium tracking-tight mt-12 mb-12 md:mt-16 md:mb-16;
 }
 
 .prose h3 {

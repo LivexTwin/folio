@@ -46,7 +46,7 @@ export default function Footer() {
                   className="link-style flex items-center"
                 >
                   <ArrowIcon />
-                  <span className="ml-2">Twitter</span>
+                  <span className="ml-2">X</span>
                 </a>
               </li>
               <li>

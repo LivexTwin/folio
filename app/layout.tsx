@@ -51,7 +51,7 @@ export default function RootLayout({
       suppressHydrationWarning
       lang="en"
       className={cx(
-        "text-black bg-white dark:text-white dark:bg-black ",
+        "text-black bg-white dark:text-white dark:bg-black  ",
         GeistSans.variable,
         GeistMono.variable
       )}
@@ -59,13 +59,14 @@ export default function RootLayout({
       <body>
         <div
           id="site"
-          className="antialiased md:max-w-2xl lg:max-w-4xl mx-4 mt-8 md:mx-auto text-responsive"
+          className="antialiased md:max-w-2xl lg:max-w-4xl mx-4 md:mx-auto text-responsive"
         >
           <Providers>
-            <header>
+            <header className=" sticky top-0 z-20">
               <Navbar />
             </header>
-            <main className="flex-auto min-w-0 pb-16 flex flex-col px-2 md:px-0">
+
+            <main className="flex-auto min-w-0 pb-16 flex flex-col ">
               {children}
             </main>
             <Analytics />

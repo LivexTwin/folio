@@ -26,16 +26,16 @@ export function Navbar() {
 
   return (
     <LazyMotion features={domAnimation}>
-      <m.aside className="tracking-tight mb-10 md:mb-20">
+      <aside>
         <m.nav
-          initial="hidden"
           variants={{
             visible: { y: 0 },
             hidden: { y: "-100%" }, // 200% makes it hide off the screen 100% stays on screen
           }}
+          initial={false} // No initial animation
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className="  flex flex-row items-center ml-[8px] pt-6  justify-between "
+          className="  flex flex-row items-center ml-[8px] pt-3 lg:pt-6 pb-3  bg-white dark:bg-black justify-between tracking-tight "
           id="nav"
         >
           <div>
@@ -84,7 +84,7 @@ export function Navbar() {
             <NavMenu />
           </div>
         </m.nav>
-      </m.aside>
+      </aside>
     </LazyMotion>
   );
 }

@@ -48,7 +48,7 @@ html {
 
 #site {
   min-height: 100dvh;
-  min-height: 100svh;
+  /* min-height: 100svh; */
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(0, 1fr);

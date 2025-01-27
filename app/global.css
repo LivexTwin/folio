@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Default (light mode) */
 ::selection {
-  background-color: #47a3f3;
+  background-color: #000000;
   color: #fefefe;
+}
+
+.dark ::selection {
+  color: #000000;
+  background-color: #fefefe;
 }
 
 .text-small-plus {

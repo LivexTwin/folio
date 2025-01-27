@@ -68,7 +68,7 @@ export default function Footer() {
             <h3 className="font-semibold  mb-4">More</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#uses" className="link-style">
+                <Link href="/uses" className="link-style">
                   Uses
                 </Link>
               </li>

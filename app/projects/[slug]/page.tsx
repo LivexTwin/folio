@@ -54,9 +54,9 @@ const SlugPage = () => {
   // Check if the project is under construction
   if (project.isUnderConstruction) {
     return (
-      <div className="flex flex-col gap-4 items-center min-h-[100svh] justify-center">
+      <div className="flex flex-col gap-4 p-4 items-center min-h-[70svh] md:min-h-[80vh] justify-center">
         <h1 className="text-2xl font-bold">🚧 Under Construction 🚧</h1>
-        <p className=" text-lg mb-4 dark:text-neutral-400">
+        <p className=" mb-4 dark:text-neutral-400 text-center">
           This project is currently under construction. Please check back later!
         </p>
         <button

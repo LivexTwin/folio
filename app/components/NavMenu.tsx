@@ -19,7 +19,7 @@ export function NavMenu() {
 
   // Function to handle scroll and close the menu
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 150 && menuOpen) {
+    if (latest > 100 && menuOpen) {
       setMenuOpen(false); // Close menu when scroll passes 150px
     }
   });

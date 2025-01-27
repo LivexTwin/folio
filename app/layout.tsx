@@ -63,7 +63,7 @@ export default function RootLayout({
           className="antialiased md:max-w-2xl lg:max-w-4xl mx-4 md:mx-auto text-responsive"
         >
           <Providers>
-            <header className="sticky top-0 z-20">
+            <header className="z-20">
               <Navbar />
             </header>
 

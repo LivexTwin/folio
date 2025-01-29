@@ -122,12 +122,12 @@ const ProjectDetail = ({ projectNumber, project }: ProjectProps) => {
           </div>
         </div>
       </div>
-      <div className="flex gap-4 justify-center pt-8 md:pt-12 lg:pt-16 pb-8 text-lg">
+      <div className="flex gap-4 justify-center pt-8 md:pt-12 lg:pt-16 pb-8 lg:text-lg">
         <a
           href={project.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn"
+          className="btn-2 border"
           aria-label="Visit GitHub profile"
         >
           See Code
@@ -136,7 +136,7 @@ const ProjectDetail = ({ projectNumber, project }: ProjectProps) => {
           href={project.liveSiteUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-2 border"
+          className="btn"
           aria-label="Visit live site"
         >
           Visit Site

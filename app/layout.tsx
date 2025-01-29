@@ -7,6 +7,7 @@ import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
+import ThemeFaviconUpdater from "./components/ThemeFaviconUpdater";
 import { baseUrl } from "./sitemap";
 
 import Providers from "./providers";
@@ -58,17 +59,15 @@ export default function RootLayout({
       )}
     >
       <body>
-        <div
-          id="site"
-          className="antialiased md:max-w-2xl lg:max-w-4xl mx-4 md:mx-auto text-responsive"
-        >
+        <div id="site" className="antialiased  md:mx-auto text-responsive">
           <Providers>
             <header className="z-20">
               <Navbar />
             </header>
 
             <LazyMotion features={domAnimation}>
-              <main className="flex-auto min-w-0 pt-8 md:pt-20 pb-16 flex flex-col">
+              <main className="flex-auto min-w-0 flex flex-col px-4 md:px-8">
+                <ThemeFaviconUpdater />
                 {children}
               </main>
             </LazyMotion>

@@ -16,9 +16,9 @@ type ProjectProps = {
 
 const ProjectDetail = ({ projectNumber, project }: ProjectProps) => {
   return (
-    <section className="px-2 pb-4 flex flex-col gap-5 md:gap-7">
+    <section className="pb-8 md:pb-16 flex flex-col gap-5 md:gap-7 ">
       {/* Project Number */}
-      <div className=" lg:h-[50dvh] lg:grid place-items-center">
+      <div className=" lg:h-[50dvh] lg:grid place-items-center pt-8 lg:pt-0">
         <div>
           <h1 className="mb-4 text-2xl lg:text-3xl font-semibold uppercase">
             Project {projectNumber}
@@ -59,62 +59,65 @@ const ProjectDetail = ({ projectNumber, project }: ProjectProps) => {
       </div>
 
       {/* Overview Section */}
-      <div>
-        <h2 className="mb-4 text-xl font-medium ">Overview</h2>
-        <p className="text-base text-neutral-700 dark:text-neutral-400">
-          {project.overview}
-        </p>
-      </div>
-
-      <div className="lg:grid lg:grid-cols-2 lg:gap-10 space-y-10 lg:space-y-0">
-        {/* Tech Stack Section */}
-        <div>
-          <h2 className="mb-4 text-xl font-medium ">Tech Stack</h2>
-          <ul className="list-disc pl-5">
-            {project.tech.map((tech, index) => (
-              <li
-                key={index}
-                className="text-base text-neutral-700 dark:text-neutral-400"
-              >
-                {tech}
-              </li>
-            ))}
-          </ul>
+      <div className="my-container mx-auto">
+        <div className="lg:mb-20">
+          <h2 className="mb-4 text-xl font-medium">Overview</h2>
+          <p className="mb-4 text-neutral-700 dark:text-neutral-400">
+            {project.overview}
+          </p>
         </div>
 
-        {/* Design Tools Section (new) */}
-        {project.designTools && (
+        {/* Change grid to 3 columns on large screens */}
+        <div className="lg:grid lg:grid-cols-3 lg:gap-10 space-y-10 lg:space-y-0">
+          {/* Tech Stack Section */}
           <div>
-            <h2 className="mb-4 text-xl font-medium ">Design Tools</h2>
+            <h2 className="mb-4 text-xl font-medium">Tech Stack</h2>
             <ul className="list-disc pl-5">
-              {project.designTools.map((tool, index) => (
+              {project.tech.map((tech, index) => (
                 <li
                   key={index}
-                  className="text-base text-neutral-700 dark:text-neutral-400"
+                  className=" text-neutral-700 dark:text-neutral-400"
                 >
-                  {tool}
+                  {tech}
                 </li>
               ))}
             </ul>
           </div>
-        )}
 
-        {/* Design Overview Section (new) */}
-        {project.designOverview && (
+          {/* Design Tools Section */}
+          {project.designTools && (
+            <div>
+              <h2 className="mb-4 text-xl font-medium">Design Tools</h2>
+              <ul className="list-disc pl-5">
+                {project.designTools.map((tool, index) => (
+                  <li
+                    key={index}
+                    className=" text-neutral-700 dark:text-neutral-400"
+                  >
+                    {tool}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Design Overview Section */}
+          {project.designOverview && (
+            <div>
+              <h2 className="mb-4 text-xl font-medium">Design Overview</h2>
+              <p className="text-neutral-700 dark:text-neutral-400">
+                {project.designOverview}
+              </p>
+            </div>
+          )}
+
+          {/* Role Section */}
           <div>
-            <h2 className="mb-4 text-xl font-medium ">Design Overview</h2>
-            <p className="text-base text-neutral-700 dark:text-neutral-400">
-              {project.designOverview}
+            <h2 className="mb-4 text-xl font-medium">Role</h2>
+            <p className=" text-neutral-700 dark:text-neutral-400">
+              {project.role}
             </p>
           </div>
-        )}
-
-        {/* Role Section */}
-        <div>
-          <h2 className="mb-4 text-xl font-medium ">Role</h2>
-          <p className="text-base text-neutral-700 dark:text-neutral-400">
-            {project.role}
-          </p>
         </div>
       </div>
     </section>

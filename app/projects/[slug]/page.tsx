@@ -36,8 +36,8 @@ const SlugPage = () => {
 
   if (projectIndex === -1) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className="text-3xl font-bold">Project Not Found</h1>
+      <div className="flex flex-col items-center justify-center sm:h-[calc(100svh-54px)]  lg:h-[calc(100dvh-64px)]">
+        <h1 className="text-2xl font-medium mb-6">Project Not Found</h1>
         <button
           onClick={() => router.push("/")}
           className="btn text-lg uppercase"
@@ -54,9 +54,9 @@ const SlugPage = () => {
   // Check if the project is under construction
   if (project.isUnderConstruction) {
     return (
-      <div className="flex flex-col gap-4 p-4 items-center min-h-[70svh] md:min-h-[80vh] justify-center">
+      <div className="flex flex-col gap-8 items-center custom-h-screen  justify-center">
         <h1 className="text-2xl font-bold">🚧 Under Construction 🚧</h1>
-        <p className=" mb-4 dark:text-neutral-400 text-center">
+        <p className="dark:text-neutral-400 text-center">
           This project is currently under construction. Please check back later!
         </p>
         <button
@@ -103,7 +103,7 @@ const SlugPage = () => {
       <ProjectDetail projectNumber={projectNumber} project={project} />
 
       {/* Pagination Controls */}
-      <div className="flex justify-between  mt-6">
+      <div className="flex justify-between my-m my-container mx-auto">
         {/* Previous Project Button */}
         <button
           onClick={goToPreviousProject}

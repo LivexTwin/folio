@@ -111,7 +111,6 @@ export const uses: Uses = {
       category: "Stack",
       extraInfo: [
         {
-          label: "Tools",
           content: ["macOS: Ghostty", "Win: Powershell 7", "Git Bash"],
         },
       ],
@@ -122,7 +121,6 @@ export const uses: Uses = {
       category: "Stack",
       extraInfo: [
         {
-          label: "Tools",
           content: ["GitHub CLI", "Vercel CLI"],
         },
       ],
@@ -133,7 +131,6 @@ export const uses: Uses = {
       category: "Stack",
       extraInfo: [
         {
-          label: "Tools",
           content: ["GitHub Copilot", "ChatGPT"],
         },
       ],
@@ -168,7 +165,6 @@ export const uses: Uses = {
       category: "Software",
       extraInfo: [
         {
-          label: "Tools",
           content: [
             "Figma",
             "Adobe Illustrator",
@@ -186,7 +182,6 @@ export const uses: Uses = {
       category: "Software",
       extraInfo: [
         {
-          label: "Tools",
           content: ["YouTube Music Premium", "Spotify"],
         },
       ],

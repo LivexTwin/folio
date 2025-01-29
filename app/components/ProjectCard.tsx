@@ -28,7 +28,7 @@ const ProjectCard = ({
   isFeatured: boolean;
 }) => {
   return (
-    <div className="lg:max-h-[400px] lg:flex flex-col justify-between border dark:border-none p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 dark:hover:bg-[#0a0a0a] dark:hover:shadow-[0_1px_2px_rgba(0,0,0,0.16)] dark:transition-[background-color_0.2s,_box-shadow_0.2s] cursor-pointer">
+    <div className=" border dark:border-none p-4 rounded-lg shadow-md hover:shadow-lg transition duration-200 dark:hover:bg-[#0a0a0a] dark:hover:shadow-[0_1px_2px_rgba(0,0,0,0.16)] dark:transition-[background-color_0.2s,_box-shadow_0.2s] cursor-pointer">
       <Link href={project.url}>
         <div className="flex justify-between items-center">
           <h2 className="text-xl font-light uppercase mb-2">{project.title}</h2>

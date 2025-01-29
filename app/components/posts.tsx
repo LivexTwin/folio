@@ -27,7 +27,7 @@ export function BlogPosts() {
                 {formatDate(post.metadata.publishedAt, false, true)}{" "}
                 {/* Short date (Jan 11) */}
               </p>
-              <p className="tracking-tight">{post.metadata.title}</p>
+              <p className="tracking-tight ">{post.metadata.title}</p>
             </div>
           </Link>
         ))}

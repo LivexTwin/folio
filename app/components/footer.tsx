@@ -20,8 +20,8 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="pb-8 lg:pt-8">
-      <div className="container mx-auto px-6">
+    <footer className="pb-8 px-[24px] pt-8 ">
+      <div className="my-container-2 mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Connect Section */}
           <div>

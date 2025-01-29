@@ -7,7 +7,7 @@ import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
-import ThemeFaviconUpdater from "./components/ThemeFaviconUpdater";
+
 import { baseUrl } from "./sitemap";
 
 import Providers from "./providers";
@@ -66,8 +66,7 @@ export default function RootLayout({
             </header>
 
             <LazyMotion features={domAnimation}>
-              <main className="flex-auto min-w-0 flex flex-col px-4 md:px-8">
-                <ThemeFaviconUpdater />
+              <main className="flex-auto min-w-0 flex flex-col px-[24px] md:px-8">
                 {children}
               </main>
             </LazyMotion>

@@ -2,9 +2,9 @@ import { uses } from "data/uses";
 
 export default function UsesPage() {
   return (
-    <div>
+    <div className="my-p my-m lg:w-[1680px] lg:ml-auto">
       <h1 className="text-2xl font-bold mb-6">Uses</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {Object.entries(uses).map(([category, items]) => (
           <div key={category} className="space-y-4">
             {/* Main category name */}
@@ -30,7 +30,7 @@ export default function UsesPage() {
                   <div key={idx} className="space-y-2">
                     {/* Label and Details */}
                     {info.label && (
-                      <h4 className=" font-semibold">{info.label}</h4>
+                      <h4 className="text-sm font-semibold">{info.label}</h4>
                     )}
                     <ul className="list-inside">
                       {info.content.map((content, contentIdx) => (

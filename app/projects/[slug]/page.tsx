@@ -36,7 +36,7 @@ const SlugPage = () => {
 
   if (projectIndex === -1) {
     return (
-      <div className="flex flex-col items-center justify-center sm:h-[calc(100svh-54px)]  lg:h-[calc(100dvh-64px)]">
+      <div className="flex flex-col items-center justify-center custom-h-screen">
         <h1 className="text-2xl font-medium mb-6">Project Not Found</h1>
         <button
           onClick={() => router.push("/")}

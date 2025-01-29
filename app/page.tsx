@@ -23,7 +23,9 @@ export default function Page() {
           Projects
         </Link>
         <button className="btn-2 border" aria-label="Download Resume">
-          Resume
+          <a href="/resume.pdf" download>
+            Resume
+          </a>
         </button>
       </div>
 

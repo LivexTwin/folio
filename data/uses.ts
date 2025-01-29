@@ -70,7 +70,7 @@ export const uses: Uses = {
       ],
     },
     {
-      id: 5,
+      id: 4,
       name: "Headphones",
       category: "Devices",
       extraInfo: [
@@ -87,7 +87,6 @@ export const uses: Uses = {
       category: "Stack",
       extraInfo: [
         {
-          label: "Tools",
           content: [
             "Next.js",
             "Nuxt.js",

@@ -66,15 +66,8 @@ html {
 
 @layer utilities {
   .custom-h-screen {
-    height: calc(100dvh - 54px); /* for smaller screens */
-    height: calc(100svh - 54px);
-  }
-
-  @media (min-width: 768px) {
-    .custom-h-screen {
-      height: calc(100dvh - 64px); /* for larger screens (lg breakpoint) */
-      height: calc(100svh - 64px);
-    }
+    height: calc(100dvh - 64px); /* for smaller screens */
+    height: calc(100svh - 64px);
   }
 
   .my-p {

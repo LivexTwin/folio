@@ -11,6 +11,8 @@ type ProjectProps = {
     role: string;
     designTools?: string[]; // Optional if not all projects have design tools
     designOverview?: string; // Optional if not all projects have a design overview
+    githubUrl: string;
+    liveSiteUrl: string;
   };
 };
 
@@ -119,6 +121,26 @@ const ProjectDetail = ({ projectNumber, project }: ProjectProps) => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex gap-4 justify-center pt-8 md:pt-12 lg:pt-16 pb-8 text-lg">
+        <a
+          href={project.githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn"
+          aria-label="Visit GitHub profile"
+        >
+          See Code
+        </a>
+        <a
+          href={project.liveSiteUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-2 border"
+          aria-label="Visit live site"
+        >
+          Visit Site
+        </a>
       </div>
     </section>
   );

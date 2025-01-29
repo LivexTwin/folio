@@ -9,6 +9,8 @@ export type Project = {
   designOverview: string; // Brief overview of your design process and what tools you used
   role: string;
   url: string;
+  githubUrl?: string; // Add optional GitHub URL
+  liveSiteUrl?: string; // Add optional Live Site URL
   slug: string;
   image: string;
   mobileImage: string;
@@ -30,6 +32,8 @@ export const projects: Project[] = [
       "For the design, I created a 3D spinning logo using Blender, designed the t-shirt mockup in Adobe Illustrator, and produced the site background video with CapCut. These design elements helped establish the branding for vlssh0p.com.",
     role: "Design, Frontend and Backend",
     url: "/projects/vlssh0p",
+    githubUrl: "https://github.com/LivexTwin/vls-shop", // Add your GitHub URL
+    liveSiteUrl: "https://vlssh0p.com", // Add your live site URL
     slug: "vlssh0p",
     image: "/images/vls_large.png",
     mobileImage: "/images/vls_mobile.png",
@@ -49,6 +53,8 @@ export const projects: Project[] = [
       "For this portfolio, I focused on a minimalist design, using Figma for wireframing and layout design, and Adobe Illustrator for creating vector assets. After Effects was used for subtle animations to enhance the user experience.",
     role: "Frontend Developer and Animator",
     url: "/projects/this-website",
+    githubUrl: "https://github.com/yourusername/portfolio", // Add your GitHub URL
+    liveSiteUrl: "https://yourportfolio.com", // Add your live site URL
     slug: "this-website",
     image: "/images/vlssh0p-desktop.png",
     mobileImage: "/images/vlssh0p-mobile.png",
@@ -63,11 +69,13 @@ export const projects: Project[] = [
     overview:
       "Yxngrod.com was a collaborative effort to highlight the artist's creative work. I focused on creating a cohesive brand identity and implemented a design that was bold and interactive. The website includes custom features like a music player, embedded videos, and a visually striking layout. Technologies like Vite, Vue, and Blender were used to bring the concept to life.",
     tech: ["Vite", "Vue", "Node.js", "Vanilla CSS"],
-    designTools: ["Blender", "Adobe Illustrator", "CapCut"], // Updated design tools
+    designTools: ["Blender", "Adobe Illustrator", "CapCut"],
     designOverview:
-      "I used Blender to create the 3D extruded logo and applied a custom background image in the World settings. The branding was designed in Adobe Illustrator, and the background video was created with CapCut.", // Updated design overview
+      "I used Blender to create the 3D extruded logo and applied a custom background image in the World settings. The branding was designed in Adobe Illustrator, and the background video was created with CapCut.",
     role: "Graphic Designer, Frontend and Backend",
     url: "/projects/yxngrod",
+    githubUrl: "https://github.com/LivexTwin/yxngrod2.0", // Add your GitHub URL
+    liveSiteUrl: "https://yxngrod.com", // Add your live site URL
     slug: "yxngrod",
     image: "/images/yxngrod_large.png",
     mobileImage: "/images/yxngrod_mobile.png",

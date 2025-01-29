@@ -11,8 +11,8 @@ type ProjectProps = {
     role: string;
     designTools?: string[]; // Optional if not all projects have design tools
     designOverview?: string; // Optional if not all projects have a design overview
-    githubUrl: string;
-    liveSiteUrl: string;
+    githubUrl?: string;
+    liveSiteUrl?: string;
   };
 };
 

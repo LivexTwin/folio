@@ -28,7 +28,10 @@ export default function HireMeButton() {
                 d="M 150, 150 m -60, 0 a 60,60 0 0,1 120, 0 a 60,60 0 0,1 -120,0"
               />
             </defs>
-            <text fill="currentColor  " className=" text-[1.060rem] ">
+            <text
+              fill="currentColor  "
+              className=" text-[1.060rem] tracking-wide"
+            >
               <textPath xlinkHref="#circlePath">
                 Designer ⭑ Developer ⭑ Designer ⭑ Developer ⭑
               </textPath>

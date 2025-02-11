@@ -39,6 +39,8 @@ html {
 #site {
   min-height: 100dvh;
   min-height: 100svh;
+  width: min(90%);
+  margin-inline: auto;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(0, 1fr);
@@ -140,6 +142,7 @@ html {
 
 /* featured badge styling */
 .shine {
+  display: inline-block;
   position: relative;
   text-transform: uppercase;
   font-size: x-small;
@@ -265,6 +268,11 @@ html {
   100% {
     opacity: 0;
   }
+}
+
+/* Project Card global styles */
+.project-card {
+  @apply border dark:border-none rounded-lg shadow-md hover:shadow-lg transition duration-200 cursor-pointer dark:hover:bg-[#0c0c0c] dark:hover:shadow-[0_1px_2px_rgba(0,0,0,0.16)] dark:transition-[background-color_0.2s,_box-shadow_0.2s];
 }
 
 .prose .anchor {

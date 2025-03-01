@@ -22,18 +22,18 @@ const ProjectDetail = ({ projectNumber, project }: ProjectProps) => {
       {/* Project Number */}
       <div className=" lg:custom-h-screen md:my-container md:mx-auto lg:grid grid-cols-[1fr_2fr] lg lg:items-center  pt-8 lg:pt-0">
         <div>
-          <h1 className="mb-4 text-2xl lg:text-3xl font-semibold uppercase">
+          <h1 className="mb-4 text-3xl lg:text-4xl font-semibold tracking-wide  uppercase">
             Project {projectNumber}
           </h1>
           {/* Project Title */}
           <div className="lg:flex gap-10">
-            <h2 className="text-xl font-medium mb-4">Title</h2>
+            <p className="text-xl font-medium mb-4">Title</p>
             <p className="text-lg font-semibold uppercase">{project.title}</p>
           </div>
         </div>
 
         {/* Images Section */}
-        <div className="lg:pb-16 pt-8">
+        <div className="lg:pb-16 pt-8 pb-8 ">
           {/* Mobile Image */}
           <div className="sm:hidden">
             <Image
@@ -41,7 +41,7 @@ const ProjectDetail = ({ projectNumber, project }: ProjectProps) => {
               alt={`Mobile view of ${project.title}`}
               width={180}
               height={230}
-              className="mask-gradient mx-auto"
+              className="mask-gradient mx-auto "
               priority
             />
           </div>
@@ -60,24 +60,29 @@ const ProjectDetail = ({ projectNumber, project }: ProjectProps) => {
       </div>
 
       {/* Overview Section */}
-      <div className="my-container mx-auto">
-        <div className="lg:mb-20">
-          <h2 className="mb-4 text-xl font-medium">Overview</h2>
-          <p className="mb-8 text-neutral-700 dark:text-neutral-400">
-            {project.overview}
-          </p>
-        </div>
 
-        {/* Change grid to 3 columns on large screens */}
-        <div className="lg:grid lg:grid-cols-2  lg:gap-10 space-y-10 lg:space-y-0">
-          {/* Tech Stack Section */}
+      <div className="my-container mx-auto">
+        <h2 className="mb-4 lg:mb-8 text-2xl lg:text-3xl tracking-wide  font-semibold uppercase">
+          Project Info:
+        </h2>
+        {/* Grid layout: 2 columns on large screens */}
+        <div className="lg:grid lg:grid-cols-3 lg:gap-10 space-y-10 lg:space-y-0">
+          {/* Overview Section: Span 2 columns on large screens */}
+          <div className="lg:col-span-2">
+            <h3 className="mb-4 text-xl font-medium">Overview</h3>
+            <p className="mb-8 ml-2 text-neutral-700 dark:text-neutral-400 text-balance">
+              {project.overview}
+            </p>
+          </div>
+
+          {/* Technical Section: Place in right column */}
           <div>
-            <h2 className="mb-4 text-xl font-medium">Technical</h2>
+            <h3 className="mb-4 text-xl font-medium">Technical</h3>
             <ul>
               {project.tech.map((tech, index) => (
                 <li
                   key={index}
-                  className=" text-neutral-700 dark:text-neutral-400"
+                  className="ml-2 text-neutral-700 dark:text-neutral-400"
                 >
                   {tech}
                 </li>
@@ -85,15 +90,25 @@ const ProjectDetail = ({ projectNumber, project }: ProjectProps) => {
             </ul>
           </div>
 
-          {/* Design Tools Section */}
+          {/* Design Overview Section: Span 2 columns on large screens */}
+          {project.designOverview && (
+            <div className="lg:col-span-2">
+              <h3 className="mb-4 text-xl font-medium">Design Overview</h3>
+              <p className="ml-2 text-neutral-700 dark:text-neutral-400 text-balance">
+                {project.designOverview}
+              </p>
+            </div>
+          )}
+
+          {/* Design Tools Section: Place in right column */}
           {project.designTools && (
             <div>
-              <h2 className="mb-4 text-xl font-medium">Design Tools</h2>
+              <h3 className="mb-4 text-xl font-medium">Design Tools</h3>
               <ul>
                 {project.designTools.map((tool, index) => (
                   <li
                     key={index}
-                    className=" text-neutral-700 dark:text-neutral-400"
+                    className="ml-2 text-neutral-700 dark:text-neutral-400"
                   >
                     {tool}
                   </li>
@@ -102,26 +117,17 @@ const ProjectDetail = ({ projectNumber, project }: ProjectProps) => {
             </div>
           )}
 
-          {/* Design Overview Section */}
-          {project.designOverview && (
-            <div>
-              <h2 className="mb-4 text-xl font-medium">Design Overview</h2>
-              <p className="text-neutral-700 dark:text-neutral-400">
-                {project.designOverview}
-              </p>
-            </div>
-          )}
-
-          {/* Role Section */}
-          <div>
-            <h2 className="mb-4 text-xl font-medium">Role</h2>
-            <p className=" text-neutral-700 dark:text-neutral-400">
+          {/* Role Section: Center below the others */}
+          <div className="lg:col-span-3 lg:pt-16 text-center">
+            <h3 className="mb-4 text-xl font-medium">Role</h3>
+            <p className="text-neutral-700 dark:text-neutral-400">
               {project.role}
             </p>
           </div>
         </div>
       </div>
-      <div className="flex gap-4 justify-center pt-8 md:pt-12 lg:pt-16 pb-8 lg:text-lg">
+
+      <div className="flex gap-4 lg:gap-10 justify-center pt-8 md:pt-12 lg:pt-16 pb-8 lg:text-lg">
         <a
           href={project.githubUrl}
           target="_blank"

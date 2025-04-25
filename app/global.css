@@ -1,0 +1,384 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default (light mode) */
+::selection {
+  background-color: #000000;
+  color: #fefefe;
+}
+
+.dark ::selection {
+  color: #000000;
+  background-color: #fefefe;
+}
+
+.text-small-plus {
+  @apply text-[1.1rem];
+}
+
+:root {
+  --sh-class: #2d5e9d;
+  --sh-identifier: #354150;
+  --sh-sign: #8996a3;
+  --sh-string: #007f7a;
+  --sh-keyword: #e02518;
+  --sh-comment: #a19595;
+  --sh-jsxliterals: #6266d1;
+  --sh-property: #e25a1c;
+  --sh-entity: #e25a1c;
+  --font-geist-sans: "Geist Sans", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+}
+
+html {
+  min-width: 360px;
+  scroll-behavior: smooth;
+}
+
+#site {
+  min-height: 100dvh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+#nav {
+  will-change: transform;
+}
+
+@layer utilities {
+  .custom-h-screen {
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+  }
+
+  /* Remove extra padding on medium screens (md and up) */
+  @media (min-width: 768px) {
+    .custom-h-screen {
+      height: calc(100dvh - 64px);
+      height: calc(100svh - 64px);
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .my-p {
+    @apply pt-8; /* Default padding for all screens */
+  }
+
+  @media (min-width: 768px) {
+    /* Medium screens (md and up) */
+    .my-p {
+      @apply pt-14;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* Large screens (lg and up) */
+    .my-p {
+      @apply pt-20;
+    }
+  }
+
+  /* custom container */
+  .my-container {
+    @apply max-w-[70rem];
+  }
+
+  .my-container-2 {
+    @apply max-w-[78rem];
+  }
+
+  .my-m {
+    @apply pb-8;
+  }
+
+  @media (min-width: 768px) {
+    /* Large screens (lg and up) */
+    .my-m {
+      @apply pb-14;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* Large screens (lg and up) */
+    .my-m {
+      @apply pb-20;
+    }
+  }
+}
+
+/* global buttons */
+.btn {
+  @apply rounded-full bg-black text-white dark:bg-white dark:text-black  py-[6px] px-[12px];
+}
+
+.btn-2 {
+  @apply rounded-full bg-white text-black dark:bg-black dark:text-white border-[#292929] py-[6px] px-[12px];
+}
+
+/* *link styling* */
+.link-style {
+  @apply transition-all hover:text-neutral-800 dark:hover:text-neutral-200;
+}
+
+/* logo scale up */
+.svg-icon {
+  width: 40px;
+  height: 30px;
+}
+
+/* On medium screens (md) and larger, increase the size */
+@media (min-width: 768px) {
+  .svg-icon {
+    width: 50px;
+    height: 40px;
+  }
+}
+
+/* featured badge styling */
+.shine {
+  position: relative;
+  text-transform: uppercase;
+  font-size: x-small;
+
+  border-radius: 9999px;
+  padding: 5px 10px;
+  margin-top: -0.5rem;
+  background: linear-gradient(
+      113.36deg,
+      #fff0,
+      #ffffff04 15%,
+      #ffffff12 40%,
+      #ffffff04 60%,
+      #fff0
+    ),
+    #000;
+
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.shine:before {
+  content: "";
+  animation: shine 18s cubic-bezier(0.8, 0, 0.05, 1) infinite; /* Keeps original duration */
+  background: linear-gradient(
+    112deg,
+    transparent 30%,
+    hsla(0, 0%, 100%, 0.4) 40%,
+    hsla(0, 0%, 100%, 0.6) 50%,
+    hsla(0, 0%, 100%, 0.4) 60%,
+    transparent 80%
+  );
+  background-position: 0;
+  background-size: 200% auto;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.dark .shine {
+  border: 0.5px solid #292929;
+}
+
+.dark .shine:before {
+  background: linear-gradient(
+    112deg,
+    transparent 30%,
+    hsla(0, 0%, 100%, 0.1) 40%,
+    hsla(0, 0%, 100%, 0.3) 50%,
+    hsla(0, 0%, 100%, 0.1) 60%,
+    transparent 80%
+  );
+  background-position: 0;
+  background-size: 200% auto;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    background-position: -50%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  15% {
+    background-position: 150%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+
+  /* First cycle ends, second cycle starts */
+  33.33% {
+    opacity: 0;
+  }
+  38.33% {
+    background-position: -50%;
+    opacity: 0;
+  }
+  43.33% {
+    opacity: 0.7;
+  }
+  48.33% {
+    background-position: 150%;
+    opacity: 0;
+  }
+  53.33% {
+    opacity: 0;
+  }
+
+  /* Second cycle ends, third cycle starts */
+  66.66% {
+    opacity: 0;
+  }
+  71.66% {
+    background-position: -50%;
+    opacity: 0;
+  }
+  76.66% {
+    opacity: 0.7;
+  }
+  81.66% {
+    background-position: 150%;
+    opacity: 0;
+  }
+  86.66% {
+    opacity: 0;
+  }
+
+  /* Third cycle ends, prepare for restart */
+  100% {
+    opacity: 0;
+  }
+}
+
+.prose .anchor {
+  @apply absolute invisible no-underline;
+
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  @apply visible;
+}
+
+.prose a {
+  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+}
+
+.prose .anchor:after {
+  @apply text-neutral-300 dark:text-neutral-700;
+  content: "✰";
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+.prose pre {
+  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+}
+
+.prose code {
+  @apply px-1 py-0.5 rounded-lg;
+}
+
+.prose pre code {
+  @apply p-0;
+  border: initial;
+  line-height: 1.5;
+}
+
+.prose code span {
+  @apply font-medium;
+}
+
+.prose img {
+  /* Don't apply styles to next/image */
+  @apply m-0;
+}
+
+.prose p {
+  @apply my-4 text-neutral-800 dark:text-neutral-200;
+}
+
+.prose h1 {
+  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose h2 {
+  @apply text-xl lg:text-3xl font-medium tracking-tight mt-12 mb-12 md:mt-16 md:mb-16;
+}
+
+.prose h3 {
+  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose h4 {
+  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose strong {
+  @apply font-medium;
+}
+
+.prose ul {
+  @apply list-disc pl-6;
+}
+
+.prose ol {
+  @apply list-decimal pl-6;
+}
+
+.prose > :first-child {
+  /* Override removing top margin, causing layout shift */
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Remove Safari input shadow on mobile */
+input[type="text"],
+input[type="email"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.title {
+  text-wrap: balance;
+}

@@ -14,10 +14,9 @@ export type Project = {
   slug: string;
   image: string;
   mobileImage: string;
-  isFeatured: boolean;
+  isFeatured?: boolean; // Optional property for featured projects
   isUnderConstruction: boolean;
 };
-
 export const projects: Project[] = [
   {
     id: 1,
@@ -25,17 +24,17 @@ export const projects: Project[] = [
     description:
       "I developed a headless Shopify storefront, focusing on creating a seamless and customizable e-commerce experience.",
     overview:
-      "Designed and developed a custom storefront for vlssh0p.com using Nuxt 3. Starting with an engaging 'Enter Shop' page, I opted for a headless approach for maximum customization, using GraphQL for querying and Pinia for state management to ensure a seamless shopping experience.",
+      "Took a development store and decoupled it using Nuxt and Shopify, bringing it to life with the vision and design elements of my creative agency. The design reflects how I’d envision my first store. Built with GraphQL and Pinia for a smooth, customizable shopping experience.",
     tech: ["Nuxt 3", "GraphQL", "Shopify Storefront API", "Pinia"],
     designTools: ["Blender", "Adobe Illustrator", "CapCut"],
     designOverview:
       "For the design, I created a 3D spinning logo using Blender, designed the t-shirt mockup in Adobe Illustrator, and produced the site background video with CapCut. These design elements helped establish the branding for vlssh0p.com.",
     role: "Design, Frontend and Backend",
     url: "/projects/vlssh0p",
-    githubUrl: "https://github.com/LivexTwin/vls-shop", // Add your GitHub URL
-    liveSiteUrl: "https://vlssh0p.com", // Add your live site URL
+    githubUrl: "https://github.com/LivexTwin/vls-shop",
+    liveSiteUrl: "https://vlssh0p.com",
     slug: "vlssh0p",
-    image: "/images/vls_large.jpg",
+    image: "/images/vls_large.png",
     mobileImage: "/images/vls_mobile.png",
     isFeatured: true,
     isUnderConstruction: false,
@@ -53,12 +52,11 @@ export const projects: Project[] = [
       "For this portfolio, I focused on a minimalist design, using Figma for wireframing and layout design, and Adobe Illustrator for creating vector assets. After Effects was used for subtle animations to enhance the user experience.",
     role: "Frontend Developer and Animator",
     url: "/projects/this-website",
-    githubUrl: "https://github.com/yourusername/portfolio", // Add your GitHub URL
-    liveSiteUrl: "https://yourportfolio.com", // Add your live site URL
+    githubUrl: "https://github.com/yourusername/portfolio",
+    liveSiteUrl: "https://yourportfolio.com",
     slug: "this-website",
     image: "/images/vlssh0p-desktop.png",
     mobileImage: "/images/vlssh0p-mobile.png",
-    isFeatured: false,
     isUnderConstruction: true,
   },
   {
@@ -74,12 +72,11 @@ export const projects: Project[] = [
       "I used Blender to create the 3D extruded logo and applied a custom background image in the World settings. The branding was designed in Adobe Illustrator, and the background video was created with CapCut.",
     role: "Graphic Designer, Frontend and Backend",
     url: "/projects/yxngrod",
-    githubUrl: "https://github.com/LivexTwin/yxngrod2.0", // Add your GitHub URL
-    liveSiteUrl: "https://yxngrod.com", // Add your live site URL
+    githubUrl: "https://github.com/LivexTwin/yxngrod2.0",
+    liveSiteUrl: "https://yxngrod.com",
     slug: "yxngrod",
     image: "/images/yxngrod_large.jpg",
     mobileImage: "/images/yxngrod_mobile.png",
-    isFeatured: false,
     isUnderConstruction: false,
   },
 ];

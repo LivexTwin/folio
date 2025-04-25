@@ -7,7 +7,7 @@ export function Navbar() {
   return (
     <aside>
       <nav
-        className="min-h-[64px] md:my-container lg:p-0 lg:max-w-[75rem] mx-auto flex flex-row items-center px-[24px] rounded-lg  bg-white dark:bg-black justify-between tracking-tight "
+        className="min-h-[64px] md:my-container lg:p-0 lg:max-w-[75rem] mx-auto flex flex-row items-center rounded-lg  bg-white dark:bg-zinc-950 justify-between tracking-tight "
         id="nav"
       >
         <div>

@@ -1,6 +1,6 @@
 "use client";
 import { navItems } from "utils/navData";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { NavButton } from "./NavButton";
 import {
